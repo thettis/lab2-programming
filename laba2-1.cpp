@@ -10,15 +10,25 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// auto square(auto x) {
+//     return x * x;
+// }
+
+// int main() {
+//     std::cout << square(5) << std::endl;
+//     std::cout << square(2.5) << std::endl;
+
+//     return 0;
+// }
+
 #include <iostream>
-
-auto square(auto x) {
-    return x * x;
+int factorial(int n){
+    if (n<=1) return 1;
+    return n * factorial(n-1);
 }
-
-int main() {
-    std::cout << square(5) << std::endl;
-    std::cout << square(2.5) << std::endl;
-
+int main(){
+    std::cout << factorial(5) << std::endl;
     return 0;
 }
