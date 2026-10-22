@@ -14,17 +14,34 @@
 # if 17<age<=64: print('Взрослый')
 # if age>=64: print('Пожилой')
 
-a, b, c = map(float,input("Введите коэффициенты a, b, c через запятую").split(','))
-if a == 0: 
-    print("это не квадратное уравнение")
-else:
-    D = b**2-4*a*c
-    if D<0: 
-        print('корней нет')
-    elif D==0: 
-        x = -b/(2*a)
-        print(f'существует только один корень: {x:.2f}')
-    else: 
-        x1 = (-b+D**0.5)/(2*a)
-        x2 = (-b-D**0.5)/(2*a)
-        print(f"1-й корень: {x1:.2f}; 2-й корень: {x2:.2f}")
+# a, b, c = map(float,input("Введите коэффициенты a, b, c через запятую").split(','))
+# if a == 0: 
+#     print("это не квадратное уравнение")
+# else:
+#     D = b**2-4*a*c
+#     if D<0: 
+#         print('корней нет')
+#     elif D==0: 
+#         x = -b/(2*a)
+#         print(f'существует только один корень: {x:.2f}')
+#     else: 
+#         x1 = (-b+D**0.5)/(2*a)
+#         x2 = (-b-D**0.5)/(2*a)
+#         print(f"1-й корень: {x1:.2f}; 2-й корень: {x2:.2f}")
+
+a,b = map(float, input('введите 2 числа через запятую').split(","))
+operation = str(input('Выберите операцию из предложенных: (+, -, *, /): '))
+match operation:
+    case "+":
+        print(f"Result: {a+b}")
+    case "-":
+        print(f"Result: {a-b}")
+    case "*":
+        print(f"Result: {a*b}")
+    case "/":
+        if b!=0:
+            print(f"Result: {a/b:.2f}")
+        else: 
+            print('Error!')
+    case _:
+        print("Error!")
