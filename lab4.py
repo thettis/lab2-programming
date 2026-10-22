@@ -29,19 +29,25 @@
 #         x2 = (-b-D**0.5)/(2*a)
 #         print(f"1-й корень: {x1:.2f}; 2-й корень: {x2:.2f}")
 
-a,b = map(float, input('введите 2 числа через запятую').split(","))
-operation = str(input('Выберите операцию из предложенных: (+, -, *, /): '))
-match operation:
-    case "+":
-        print(f"Result: {a+b}")
-    case "-":
-        print(f"Result: {a-b}")
-    case "*":
-        print(f"Result: {a*b}")
-    case "/":
-        if b!=0:
-            print(f"Result: {a/b:.2f}")
-        else: 
-            print('Error!')
-    case _:
-        print("Error!")
+# a,b = map(float, input('введите 2 числа через запятую').split(","))
+# operation = str(input('Выберите операцию из предложенных: (+, -, *, /): '))
+# match operation:
+#     case "+":
+#         print(f"Result: {a+b}")
+#     case "-":
+#         print(f"Result: {a-b}")
+#     case "*":
+#         print(f"Result: {a*b}")
+#     case "/":
+#         if b!=0:
+#             print(f"Result: {a/b:.2f}")
+#         else: 
+#             print('Error!')
+#     case _:
+#         print("Error!")
+
+year = int(input("Введите год"))
+if (year%4==0 and year %100!=0) or( year % 400 == 0):
+    print(f"{year} - високосный год.")
+else:
+    print(f"{year} - не високосный год.")
