@@ -46,8 +46,32 @@
 #     case _:
 #         print("Error!")
 
-year = int(input("Введите год"))
-if (year%4==0 and year %100!=0) or( year % 400 == 0):
-    print(f"{year} - високосный год.")
+# year = int(input("Введите год"))
+# if (year%4==0 and year %100!=0) or( year % 400 == 0):
+#     print(f"{year} - високосный год.")
+# else:
+#     print(f"{year} - не високосный год.")
+
+# a,b,c = map(int, input('Введите сторороны треугольника через пробел').split())
+# if a + b > c and a + c > b and b + c > a:
+#     if a == b == c: 
+#         print("Треугольник равносторонний.")
+#     elif a==b or b==c or a==c:
+#         print("Треугольник равнобедренный.")
+#     else:
+#         print("Треугольник разносторонний.")
+# else: 
+#     print(f"Tреугольника со сторонами {a}, {b}, {c} не существует.")
+
+hour = int(input('который час? '))
+if 5<=hour<=11: 
+    print('Сейчас утро.')
+elif 12<=hour<=17: 
+    print("Сейчас день.")
+elif 18<= hour<=21: 
+    print("Сейчас вечер")
+elif 22<= hour <= 23 or 0<=hour<=4: 
+    print("Сейчас ночь.")
 else:
-    print(f"{year} - не високосный год.")
+    print("Вы некорректно ввели время.")
+
