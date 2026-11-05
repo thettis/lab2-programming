@@ -63,15 +63,36 @@
 # else: 
 #     print(f"Tреугольника со сторонами {a}, {b}, {c} не существует.")
 
-hour = int(input('который час? '))
-if 5<=hour<=11: 
-    print('Сейчас утро.')
-elif 12<=hour<=17: 
-    print("Сейчас день.")
-elif 18<= hour<=21: 
-    print("Сейчас вечер")
-elif 22<= hour <= 23 or 0<=hour<=4: 
-    print("Сейчас ночь.")
-else:
-    print("Вы некорректно ввели время.")
+# hour = int(input('который час? '))
+# if 5<=hour<=11: 
+#     print('Сейчас утро.')
+# elif 12<=hour<=17: 
+#     print("Сейчас день.")
+# elif 18<= hour<=21: 
+#     print("Сейчас вечер")
+# elif 22<= hour <= 23 or 0<=hour<=4: 
+#     print("Сейчас ночь.")
+# else:
+#     print("Вы некорректно ввели время.")
 
+import random
+
+def guess():
+    n = random.randint(1, 100)
+    
+    print("угадайте число")
+    
+    while True:
+        try:
+            t = int(input("ввкедите попытку"))
+            if t < n:
+                print("Больше")
+            elif  t > n:
+                print("Меньше")
+            else:
+                print(f"Поздравляю! Вы угадали число {n}!")
+                break
+        except ValueError:
+            print("нет")
+
+guess()
