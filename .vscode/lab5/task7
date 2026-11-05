@@ -1,0 +1,24 @@
+def rectangle():
+    n,m = map(int, input('введите стороны прямоугольника').split(" "))
+    for _ in range(n):
+        print("* "*m)
+
+def triangle():
+    h = int(input("введите высоту треугольника "))
+    for i in range(1,h+1):
+        print(f"* "*i)
+
+def tree():
+    h = int(input("введите высоту елки "))
+    for x in range(1,h+1):
+        print("  "*(h-x) + "* "*(2*x-1))
+def rhomb():
+    h = int(input("введите высоту ромьа: "))
+    for x in range(1,h+1):
+        print("  "*(h-x) + "* "*(2*x-1))
+    for x in range(h-1,0,-1):
+        print("  "*(h-x) + "* "*(2*x-1))
+rectangle()
+triangle()
+tree()
+rhomb()
