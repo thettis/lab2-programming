@@ -1,0 +1,7 @@
+import math
+print(f"{"x":>10} {"sin(x)":>12}")
+print("-"*25)
+for i in range(11):
+    x = i*math.pi/10
+    s = math.sin(x)
+    print(f"{x:10.4f} {s:12.4f}")
