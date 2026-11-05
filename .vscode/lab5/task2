@@ -1,0 +1,11 @@
+n = int(input("введите число: "))
+summ = 0
+product = 1
+sum_sq = 0
+for x in range(1,n+1):
+    summ +=x
+    product *=x
+    sum_sq += x**2
+print(f"сумма: {summ}")
+print(f"произведение: {product}")
+print(f"сумма квадратов: {sum_sq}")
