@@ -11,25 +11,36 @@
 // }
 
 // #include <iostream>
-
+// // функция вычисления квадрата числа
 // auto square(auto x) {
 //     return x * x;
 // }
 
 // int main() {
-//     std::cout << square(5) << std::endl;
-//     std::cout << square(2.5) << std::endl;
+//     // Униформ-инициализация
+//     auto number{7};
+//     // Вызов функции
+//     auto result =square(number);
+
+//     std::cout << "число: " << number << std::endl;
+//     std::cout << "Результат: "<< result << std::endl;
 
 //     return 0;
 // }
 
-#include <iostream>
-int factorial(int n) {
-  if (n <= 1)
-    return 1;
-  return n * factorial(n - 1);
-}
-int main() {
-  std::cout << factorial(5) << std::endl;
-  return 0;
-}
+
+// #include <iostream>
+// int factorial(int n){
+//     if (n<=1) return 1;
+//     return n * factorial(n-1);
+// }
+// int main(){
+//     std::cout << factorial(5) << std::endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// int main(){
+//     int x = 10; //тип данных указывактся сразу. нельзя ввести x = 'hello'
+//     return 0;
+// }

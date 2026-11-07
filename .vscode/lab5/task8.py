@@ -22,6 +22,6 @@ def b_to_d():
     dec = 0
     for x in range(len(str(n))):
         cur = str(n)[x]
-        if cur !='0':dec+=2**(len(str(n))-x-1)
+        dec+=int(cur)*2**(len(str(n))-x-1)
     return dec
 print(b_to_d())
